@@ -1,6 +1,6 @@
 import NoteData from '../NoteData';
-import NoteDetailsClient from '../NoteDetails.client';
-import css from '../NoteDetails.module.css';
+import NoteDetailsClient from './NoteDetails.client';
+import css from './NoteDetails.module.css';
 
 export default async function NoteDetails({
   params,

@@ -6,7 +6,7 @@ import {
 import { fetchNotes } from '@/lib/api/server';
 import { notFound } from 'next/navigation';
 import { noteTags } from '@/types/note';
-import NotesClient from '../../Notes.client';
+import NotesClient from './Notes.client';
 export const dynamic = 'force-dynamic';
 export default async function Notes({
   params,

@@ -10,7 +10,7 @@ import Pagination from '@/components/Pagination/Pagination';
 import Modal from '@/components/Modal/Modal';
 import NoteForm from '@/components/NoteForm/NoteForm';
 import type { NoteTag } from '@/types/note';
-import css from './Notes.module.css';
+import css from './NotesPage.module.css';
 
 export default function NotesClient({ tag }: { tag?: NoteTag }) {
   const [page, setPage] = useState(1);
