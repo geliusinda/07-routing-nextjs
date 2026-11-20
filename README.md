@@ -13,7 +13,7 @@ npm install
 Скопіюйте `.env.example` у `.env.local` і додайте свій токен:
 
 ```env
-NEXT_PUBLIC_NOTEHUB_TOKEN=ваш_токен
+NOTEHUB_TOKEN=ваш_токен
 ```
 
 ```sh
@@ -35,6 +35,6 @@ npm run build
 
 Список нотаток відкривається на `/notes/filter/all`. Меню фільтрує нотатки за тегами. Посилання зі списку відкриває деталі в модальному вікні, а прямий перехід на `/notes/{id}` відкриває окрему сторінку.
 
-У Vercel оберіть Next.js і додайте `NEXT_PUBLIC_NOTEHUB_TOKEN` у змінні оточення.
+У Vercel оберіть Next.js і додайте `NOTEHUB_TOKEN` у змінні оточення.
 
 Стилі: https://github.com/goitacademy/react-notehub-styles/tree/hw-07.

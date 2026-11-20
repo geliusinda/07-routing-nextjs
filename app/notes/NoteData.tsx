@@ -3,7 +3,7 @@ import {
   HydrationBoundary,
   QueryClient,
 } from '@tanstack/react-query';
-import { fetchNoteById } from '@/lib/api';
+import { fetchNoteById } from '@/lib/api/server';
 import type { ReactNode } from 'react';
 import { isAxiosError } from 'axios';
 import { notFound } from 'next/navigation';
@@ -14,6 +14,7 @@ export default async function NoteData({
   id: string;
   children: ReactNode;
 }) {
+  if (!/^[\w-]+$/.test(id)) notFound();
   const client = new QueryClient();
   const queryKey = ['note', id];
   await client.prefetchQuery({ queryKey, queryFn: () => fetchNoteById(id) });
