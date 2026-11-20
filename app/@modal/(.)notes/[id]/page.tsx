@@ -1,5 +1,5 @@
-import NoteData from '../../NoteData';
-import NoteDetailsClient from '../../NoteDetails.client';
+import NoteData from '@/app/notes/NoteData';
+import NoteDetailsClient from '@/app/notes/NoteDetails.client';
 import NotePreview from './NotePreview.client';
 
 export default async function PreviewPage({
