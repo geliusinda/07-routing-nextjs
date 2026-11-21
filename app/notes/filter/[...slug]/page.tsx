@@ -23,7 +23,7 @@ export default async function Notes({
     queryFn: () => fetchNotes({ page: 1, tag }),
   });
   const error = client.getQueryState(queryKey)?.error;
-  if (error) throw error;
+  if (error) throw new Error('Could not fetch the list of notes.');
   return (
     <HydrationBoundary state={dehydrate(client)}>
       <NotesClient key={filter} tag={tag} />

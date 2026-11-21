@@ -20,7 +20,7 @@ export default async function NoteData({
   await client.prefetchQuery({ queryKey, queryFn: () => fetchNoteById(id) });
   const error = client.getQueryState(queryKey)?.error;
   if (isAxiosError(error) && error.response?.status === 404) notFound();
-  if (error) throw error;
+  if (error) throw new Error('Could not fetch note details.');
   return (
     <HydrationBoundary state={dehydrate(client)}>{children}</HydrationBoundary>
   );
