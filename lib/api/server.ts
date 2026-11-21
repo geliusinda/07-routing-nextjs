@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { createNotesApi } from './notes';
+import { createNotesApi } from '../api';
 
 export const noteHub = axios.create({
   baseURL: 'https://notehub-public.goit.study/api',
