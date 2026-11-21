@@ -2,13 +2,7 @@ import Link from 'next/link';
 import { noteTags } from '@/types/note';
 import css from './SidebarNotes.module.css';
 
-export default async function SidebarNotes({
-  params,
-}: {
-  params: Promise<{ slug?: string[] }>;
-}) {
-  const { slug } = await params;
-  const selected = slug?.[0];
+export default function SidebarNotes({ selected }: { selected?: string }) {
   return (
     <nav aria-label="Filter notes">
       <ul className={css.menuList}>

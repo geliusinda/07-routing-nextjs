@@ -16,6 +16,7 @@ export default function NotePreview({ id }: { id: string }) {
     isError,
   } = useQuery({
     queryKey: ['note', id],
+    refetchOnMount: false,
     queryFn: ({ signal }) => fetchNoteById(id, signal),
   });
 
